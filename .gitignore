@@ -1,0 +1,30 @@
+# Android build files
+/build/
+*/build/
+
+# Local configuration file (SDK paths, etc.)
+local.properties
+
+# Log files
+*.log
+
+# IntelliJ / Android Studio files
+/.idea/
+/*.iml
+*.ipr
+*.iws
+
+# Gradle files
+.gradle/
+*/.gradle/
+
+# External native build folder
+/cmake-build-debug/
+
+# APK / Bundle files
+*.apk
+*.ap_
+*.aab
+
+# Others
+.DS_Store
