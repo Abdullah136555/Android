@@ -83,7 +83,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
             commentSection = itemView.findViewById(R.id.commentSection);
             commentListLayout = itemView.findViewById(R.id.commentListLayout);
 
-            commentCountText = itemView.findViewById(R.id.commentCountText); // ✅ নতুন অ্যাড
+            commentCountText = itemView.findViewById(R.id.commentCountText);
         }
     }
 
@@ -196,7 +196,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
     // Show comments in layout
     private void showComments(int productId, LinearLayout layout) {
         layout.removeAllViews();
-        List<Comment> comments = commentDao.getCommentsByProductId(productId); // ✅ Correct DAO used
+        List<Comment> comments = commentDao.getCommentsByProductId(productId); 
         for (Comment c : comments) {
             TextView tv = new TextView(context);
             tv.setText(c.getUserName() + ": " + c.getCommentText());
