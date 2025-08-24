@@ -128,8 +128,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
 
         holder.tvLikeCount.setText(likeDao.countLikesForProduct(productId) + " Likes");
 
-        int commentCount = commentDao.getCommentCountByProductId(productId); // ✅ Add this
-        holder.commentCountText.setText(commentCount + " Comments");         // ✅ Add this
+        int commentCount = commentDao.getCommentCountByProductId(productId); 
+        holder.commentCountText.setText(commentCount + " Comments");        
 
         holder.imgLike.setOnClickListener(v -> {
             if (likeDao.isProductLikedByUser(currentUserId, productId)) {
@@ -173,13 +173,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
                 holder.commentCountText.setText(updatedCount + " Comments");
             }
         });
-//        holder.tvProductDescription.setOnClickListener(v -> {
-//            if (holder.tvFullDescription.getVisibility() == View.GONE) {
-//                holder.tvFullDescription.setVisibility(View.VISIBLE);
-//            } else {
-//                holder.tvFullDescription.setVisibility(View.GONE);
-//            }
-//        });
+
         holder.descriptionToggleLayout.setOnClickListener(v -> {
             if (holder.tvFullDescription.getVisibility() == View.GONE) {
                 holder.tvFullDescription.setVisibility(View.VISIBLE);
